@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/AppBar">
+        <TextView
+            android:id="@+id/btnBack"
+            style="@style/AppBarTitle"
+            android:text="‹ 返回"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+        <TextView style="@style/AppBarTitle" android:text="@string/label_settings" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_sex"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_sex_male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/settings_sex_female" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/settings_age"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/settings_height"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="170" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/settings_target"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTarget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="60.0" />
+
+            <TextView
+                android:id="@+id/btnSave"
+                style="@style/ActionButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:layout_marginTop="28dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/settings_save" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/settings_data_manage"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnClearData"
+                style="@style/DangerButton"
+                android:text="@string/settings_clear_data" />
+
+            <TextView
+                android:id="@+id/btnDemoData"
+                style="@style/OutlineButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/settings_fill_demo"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

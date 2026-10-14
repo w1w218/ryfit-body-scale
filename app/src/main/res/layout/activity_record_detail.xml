@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_bg">
+
+    <LinearLayout style="@style/AppBar">
+        <TextView
+            android:id="@+id/btnBack"
+            style="@style/AppBarTitle"
+            android:text="‹ 返回"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+        <TextView
+            android:id="@+id/tvDetailTitle"
+            style="@style/AppBarTitle"
+            android:text="" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <!-- 体重卡 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="22dp"
+                android:paddingBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_card">
+
+                <TextView
+                    android:id="@+id/tvDetailWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_weight"
+                    android:textSize="44sp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:text="--.- kg" />
+            </LinearLayout>
+
+            <!-- 全部身体指标（复用主页展示） -->
+            <LinearLayout
+                android:id="@+id/metricList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

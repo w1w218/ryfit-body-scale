@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#2196F3</color>
+    <color name="color_primary_dark">#1565C0</color>
+    <color name="color_accent">#FF9800</color>
+    <color name="page_bg">#F2F5F8</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_stroke">#E8EDF2</color>
+    <color name="bg_weight_card">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="text_weight">#1565C0</color>
+    <color name="divider">#EEEEEE</color>
+    <color name="danger">#E53935</color>
+    <color name="ic_launcher_bg">#1565C0</color>
+    <!-- 数据状态色（与 DataJudge / ChartColors 一致） -->
+    <color name="data_blue">#69B5E9</color>
+    <color name="data_green">#87DB00</color>
+    <color name="data_yellow">#FFC600</color>
+    <color name="data_orange">#FF7D0A</color>
+</resources>

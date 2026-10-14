@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_metric_card">
+
+    <TextView
+        android:id="@+id/tvMetricValue"
+        style="@style/MetricValue"
+        android:text="--" />
+
+    <TextView
+        android:id="@+id/tvMetricLabel"
+        style="@style/MetricLabel"
+        android:layout_marginTop="2dp" />
+</LinearLayout>

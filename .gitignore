@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+/app/build/
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# 构建产物与签名
+*.apk
+*.aab
+*.jks
+*.keystore
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 本工作区工具
+.codewhale/

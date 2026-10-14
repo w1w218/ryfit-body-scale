@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ryfit体脂秤</string>
+    <string name="app_name_full">本地体脂秤</string>
+    <string name="status_idle">未连接</string>
+    <string name="status_scanning">扫描中…</string>
+    <string name="status_connecting">连接中…</string>
+    <string name="status_connected">已连接</string>
+    <string name="btn_scan">扫描连接</string>
+    <string name="btn_disconnect">断开</string>
+    <string name="weight_unit">kg</string>
+    <string name="label_bmi">BMI</string>
+    <string name="label_fat">体脂率</string>
+    <string name="label_water">水分</string>
+    <string name="label_muscle">肌肉</string>
+    <string name="label_bone">骨量</string>
+    <string name="label_metabolism">基础代谢</string>
+    <string name="label_skinfat">皮下脂肪</string>
+    <string name="label_offalfat">内脏脂肪</string>
+    <string name="label_bodyage">身体年龄</string>
+    <string name="label_ryfit">健康评分</string>
+    <string name="label_history">历史记录</string>
+    <string name="label_settings">设置</string>
+    <string name="prompt_waiting">请上秤测量…</string>
+    <string name="prompt_press_scan">点击"扫描连接"开始</string>
+    <string name="history_empty">暂无测量记录</string>
+    <string name="settings_sex">性别</string>
+    <string name="settings_sex_male">男</string>
+    <string name="settings_sex_female">女</string>
+    <string name="settings_age">年龄</string>
+    <string name="settings_height">身高（cm）</string>
+    <string name="settings_target">目标体重（kg）</string>
+    <string name="settings_save">保存</string>
+    <string name="settings_saved">已保存</string>
+    <string name="settings_data_manage">数据管理</string>
+    <string name="settings_clear_data">清除全部测量数据</string>
+    <string name="settings_fill_demo">填充演示数据（调试）</string>
+    <string name="settings_clear_title">清除全部测量数据</string>
+    <string name="settings_clear_message">将删除全部称重记录和上次连接的设备记录。个人资料（性别 / 年龄 / 身高 / 目标体重）会保留。此操作不可恢复。</string>
+    <string name="settings_clear_confirm">清除</string>
+    <string name="settings_cancel">取消</string>
+    <string name="settings_cleared">已清除 %1$d 条记录</string>
+    <string name="settings_demo_filled">已填充 %1$d 条演示数据</string>
+    <string name="settings_demo_skipped">库中已有记录，未填充</string>
+    <string name="item_weight_suffix"> kg</string>
+</resources>
