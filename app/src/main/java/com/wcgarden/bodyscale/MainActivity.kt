@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity(), ScaleManager.Listener {
 
     private var metricRows: List<IndicatorBarView> = emptyList()
     private var measuring = false
+    // 记录落地后锁定 D2 实时帧：避免秤端的尾帧/回声帧把已刷新的结果显示回跳
+    private var measurementDone = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -123,14 +125,19 @@ class MainActivity : AppCompatActivity(), ScaleManager.Listener {
         tvState.text = text
         tvState.setTextColor(ContextCompat.getColor(this, color))
         when (state) {
+            ScaleManager.State.SCANNING -> {
+                measurementDone = false // 新一轮测量开始，解锁实时显示
+                tvPrompt.text = getString(R.string.prompt_press_scan)
+            }
             ScaleManager.State.IDLE -> tvPrompt.text = getString(R.string.prompt_press_scan)
-            ScaleManager.State.SCANNING -> tvPrompt.text = getString(R.string.prompt_press_scan)
             ScaleManager.State.CONNECTED -> tvPrompt.text = getString(R.string.prompt_waiting)
             else -> {}
         }
     }
 
     override fun onLiveWeight(weightKg: Double, finished: Boolean) {
+        // 完整记录已落库：忽略后续 D2 实时帧，主页保持显示落库的准确值
+        if (measurementDone) return
         measuring = !finished && weightKg > 0
         tvWeight.text = String.format(Locale.US, "%.1f", weightKg)
         if (finished) {
@@ -141,6 +148,7 @@ class MainActivity : AppCompatActivity(), ScaleManager.Listener {
     }
 
     override fun onMeasurement(m: ScaleProtocol.Measurement) {
+        measurementDone = true
         measuring = false
         tvWeight.text = String.format(Locale.US, "%.1f", m.weight)
         tvPrompt.text = "已保存 ${m.checkdate}"
